@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- move selection up and down with capital J,K when in highlight mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

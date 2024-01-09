@@ -198,15 +198,13 @@ bar {
 }
 
 # Assigning applications to workspaces
-# assign [class="Code"] workspace number $ws1
-# assign [class="Brave-browser"] workspace number $ws2
-assign [class="obsidian"] workspace number $ws3
-# assign [class="wezterm"] workspace number $ws4
+assign [class="obsidian"] workspace number $ws4
 assign [class="discord"] workspace number $ws9
 assign [class="gnome-control-center"] workspace number $ws10
+assign [class="org.cryptomator.launcher.Cryptomator$MainApp"] workspace number $ws10
 
 # Launch at start
-exec_always --no-startup-id xrandr --output HDMI-0 --rotate right --left-of DP-2 
+exec_always --no-startup-id xrandr --output HDMI-0 --left-of DP-0 
 # Rotate left screen to portrait
 exec_always --no-startup-id feh --bg-scale ~/Pictures/background.jpg
 exec_always --no-startup-id ~/.cargo/bin/i3wsr
@@ -214,6 +212,8 @@ exec_always --no-startup-id picom --config ~/.config/picom.conf
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 exec --no-startup-id volumeicon -d hw:0
 exec --no-startup-id volumeicon -d hw:1
+exec --no-startup-id filen
+exec --no-startup-id insync start
 # i3-gaps
 for_window [class=".*"] border pixel 0
 gaps inner 6
